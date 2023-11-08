@@ -54,7 +54,7 @@ public class Player {
 
     public static class Builder {
 
-        private String name;
+        private String playerName;
         private String fBIRaidChance;
         private double drugRate;
         private double health;
@@ -67,8 +67,8 @@ public class Player {
         private long bulletCount;
 
 
-        public Builder name(String name) {
-            this.name = name;
+        public Builder name(String playerName) {
+            this.name = playerName;
             return this;
         }
 
@@ -131,7 +131,7 @@ public class Player {
 
     private Player(Builder builder) {
 
-        name = builder.name;
+        playerName = builder.name;
         inPrison = builder.inPrison;
         money = builder.money;
         rank = builder.rank;
@@ -176,11 +176,11 @@ public class Player {
     }
 
     public String getFirstname() {
-        return name;
+        return playerName;
     }
 
     public void setFirstname(String name) {
-        this.name = name;
+        this.name = playerName;
     }
 
     public double getHealth() {
@@ -261,7 +261,7 @@ public class Player {
     public String toString() {
 
         return "Player{" +
-                "name='" + name + '\'' +
+                "playerName='" + playerName + '\'' +
                 "rank=" + rank +
                 ",money=" + money +
                 "health=" + health +
